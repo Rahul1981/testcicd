@@ -8,3 +8,5 @@ new TestcicdStack(app, 'TestcicdStack', {
   
   env: { account: '196715057542', region: 'us-east-1' },
 });
+
+app.synth();

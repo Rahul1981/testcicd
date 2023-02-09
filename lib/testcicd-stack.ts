@@ -8,9 +8,7 @@ export class TestcicdStack extends cdk.Stack {
 
    const pipeline = new pipelines.CodePipeline(this, 'demopipeline', {
       synth: new pipelines.ShellStep('Synth', {
-        // Use a connection created using the AWS console to authenticate to GitHub
-        // Other sources are available.
-        input: pipelines.CodePipelineSource.gitHub('Rahul1981/test01', 'main'),
+        input: pipelines.CodePipelineSource.gitHub('Rahul1981/testcicd', 'main'),
         commands: [
           'npm ci',
           'npm run build',
